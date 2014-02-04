@@ -1,1 +1,1 @@
-Please store here all pictures for the presentation
+Please store here all images for the presentation
