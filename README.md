@@ -4,10 +4,9 @@ This is a template for creating slides using pandoc, markdown and reveal.js.
 
 ## Usage
 
-First, you clone it with
-
 ```bash
 git clone https://github.com/era7bio/pandoc-revealjs-slides.git slides
+rm -rf slides/.git
 ```
 
 Here and further change `slides` to the name of your presentation.
