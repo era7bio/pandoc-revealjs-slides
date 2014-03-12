@@ -1,4 +1,4 @@
-% $name$
+% $title$
 % $author$
 % March 22, 2005
 
