@@ -1,5 +1,5 @@
-% Habits
-% John Doe
+% $name$
+% $author$
 % March 22, 2005
 
 # In the morning
