@@ -18,10 +18,10 @@ You should put images to `resources/images/` and logos to `resources/logos/` and
 
 ### Settings
 
-- In the `compile.revealjs.sh` script you can change 
-  + `theme` (see `resources/reveal.js/css/theme/`) 
+- In the `compile.revealjs.sh` script you can change
+  + `theme` (see `resources/reveal.js/css/theme/`)
   + `transition` style (see template for available values).
-- You can also add any [pandoc options](http://johnmacfarlane.net/pandoc/README.html#options) in the end of the command, like   
+- You can also add any [pandoc options](http://johnmacfarlane.net/pandoc/README.html#options) in the end of the command, like
   `./compile.revealjs.sh $name;format="normalize"$.md --table-of-contents`
 
 ## Distributing
@@ -31,7 +31,7 @@ You should put images to `resources/images/` and logos to `resources/logos/` and
 You can try to produce a self-contained html file using:
 
 ```bash
-./compile.revealjs.sh $name;format="normalize"$.md -V no-pdf --self-contained
+./compile.revealjs.sh $name;format="normalize"$.md --self-contained
 ```
 
 ### Printing to PDF

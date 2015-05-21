@@ -1,6 +1,8 @@
-% $title$
-% $author$
-% March 22, 2005
+---
+title: $title$
+author: $author$
+date: today
+---
 
 # In the morning
 
@@ -8,6 +10,11 @@
 
 - Turn off alarm
 - Get out of bed
+
+<aside class="notes">
+  - this is a speaker note
+  - see https://github.com/hakimel/reveal.js#speaker-notes
+</aside>
 
 ## Breakfast
 
