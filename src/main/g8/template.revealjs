@@ -3,19 +3,16 @@
 <head>
 <meta charset="utf-8">
 
-<title>$title$</title>
-
-<meta name="description" content="$title$"/>
 <meta name="apple-mobile-web-app-capable" content="yes" />
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
 
-<link rel="stylesheet" href="resources/reveal.js/css/reveal.min.css">
+<link rel="stylesheet" href="resources/reveal.js/css/reveal.css">
 $if(theme)$
   <link rel="stylesheet" href="resources/reveal.js/css/theme/$theme$.css" id="theme">
 $else$
-  <link rel="stylesheet" href="resources/reveal.js/css/theme/default.css" id="theme">
+  <link rel="stylesheet" href="resources/reveal.js/css/theme/black.css" id="theme">
 $endif$
 
 
@@ -31,18 +28,16 @@ $endif$
 $if(no-pdf)$
 $else$
 <script>
-  if( window.location.search.match( /print-pdf/gi ) ) {
-    var link = document.createElement( 'link' );
-    link.rel = 'stylesheet';
-    link.type = 'text/css';
-    link.href = 'css/print/pdf.css';
-    document.getElementsByTagName( 'head' )[0].appendChild( link );
-  }
+  var link = document.createElement( 'link' );
+  link.rel = 'stylesheet';
+  link.type = 'text/css';
+  link.href = window.location.search.match( /print-pdf/gi ) ? 'resources/reveal.js/css/print/pdf.css' : 'resources/reveal.js/css/print/paper.css';
+  document.getElementsByTagName( 'head' )[0].appendChild( link );
 </script>
 $endif$
 
 <!--[if lt IE 9]>
-<script src="resources/reveal.js/lib/js/html5shiv.js"></script>
+<script src="lib/js/html5shiv.js"></script>
 <![endif]-->
 $for(header-includes)$
   $header-includes$
@@ -60,12 +55,12 @@ $endfor$
 <div class="slides">
 
 <section>
-<h1>$title$</h1>
-$for(author)$<h3>$author$</h3>$endfor$
-<p>
-<h4>$date$</h4>
-</p>
-</section>  
+<h2>$title$</h2><br/>
+$for(author)$<h3>$author$</h3>$endfor$<br/>
+<h5>$date$</h5>
+<img width="200" style="background:trasparent; border:none; box-shadow:none;" src="resources/logos/ugr.jpg"></br>
+<img width="190" style="background:trasparent; border:none; box-shadow:none; margin:10px;" src="resources/logos/era7-logo.png"><br/>
+</section>
 
 $if(toc)$
 <section>
@@ -81,7 +76,7 @@ $body$
 </div>
 
 <script src="resources/reveal.js/lib/js/head.min.js"></script>
-<script src="resources/reveal.js/js/reveal.min.js"></script>
+<script src="resources/reveal.js/js/reveal.js"></script>
 
 <script>
   // Full list of configuration options available here:
@@ -92,19 +87,8 @@ $body$
     history: true,
     center: true,
 
-  // available themes are in /resources/reveal.js/css/theme
-  $if(theme)$
-    theme: Reveal.getQueryHash().theme || '$theme$', 
-  $else$
-    theme: Reveal.getQueryHash().theme || 'default', 
-  $endif$
-
   // default/cube/page/concave/zoom/linear/fade/none
-  $if(transition)$
-    transition: Reveal.getQueryHash().transition || '$transition$',
-  $else$
-    transition: Reveal.getQueryHash().transition || 'default',
-  $endif$
+  transition: 'slide',
 
   // Optional libraries used to extend on reveal.js
   dependencies: [
