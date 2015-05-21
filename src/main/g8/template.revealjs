@@ -57,9 +57,9 @@ $endfor$
 <section>
 <h2>$title$</h2><br/>
 $for(author)$<h3>$author$</h3>$endfor$<br/>
-<h5>$date$</h5>
-<img width="200" style="background:trasparent; border:none; box-shadow:none;" src="resources/logos/ugr.jpg"></br>
-<img width="190" style="background:trasparent; border:none; box-shadow:none; margin:10px;" src="resources/logos/era7-logo.png"><br/>
+<h5>$date$</h5><br/><br/>
+<img width="200" style="background:trasparent; border:none; box-shadow:none;" src="resources/logos/ohnoseq-logo.png"><br/>
+<img width="190" style="background:trasparent; border:none; box-shadow:none; margin:10px;" src="resources/logos/era7-logo.png">
 </section>
 
 $if(toc)$
